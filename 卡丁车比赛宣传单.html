@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建军节卡丁车挑战赛</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E63946',
+                        secondary: '#1D3557',
+                        accent: '#F1FAEE',
+                        dark: '#0D1B2A',
+                        light: '#F1FAEE',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .text-shadow-lg {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            }
+            .clip-path-slant {
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            }
+            .kart-track {
+                background-image: linear-gradient(45deg, #333 25%, transparent 25%), 
+                                 linear-gradient(-45deg, #333 25%, transparent 25%), 
+                                 linear-gradient(45deg, transparent 75%, #333 75%), 
+                                 linear-gradient(-45deg, transparent 75%, #333 75%);
+                background-size: 20px 20px;
+                background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+                opacity: 0.1;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark text-light font-sans">
+    <!-- 顶部横幅 -->
+    <header class="relative bg-primary clip-path-slant overflow-hidden">
+        <div class="absolute inset-0 kart-track"></div>
+        <div class="container mx-auto px-4 py-12 md:py-20 relative z-10">
+            <div class="text-center">
+                <h1 class="font-display font-extrabold text-[clamp(2rem,5vw,4rem)] text-shadow-lg mb-4">
+                    建军节卡丁车挑战赛
+                </h1>
+                <p class="text-[clamp(1.2rem,3vw,1.8rem)] font-bold text-shadow">
+                    安新县大健康不夜城森林卡丁车俱乐部
+                </p>
+                <p class="mt-6 inline-block bg-secondary px-6 py-3 rounded-full text-lg font-semibold">
+                    <i class="fa fa-calendar mr-2"></i>2025年8月1日 热血开赛
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- 比赛亮点 -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="font-display font-bold text-[clamp(1.8rem,4vw,2.5rem)] mb-3">速度与激情的较量</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">这个建军节，带上你的勇气和技巧，来赛道上一决高下！无论你是老手还是新手，都能在这里找到属于自己的乐趣。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-secondary/50 rounded-xl p-6 transform transition-transform hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
+                    <div class="text-primary text-4xl mb-4"><i class="fa fa-trophy"></i></div>
+                    <h3 class="font-display font-bold text-xl mb-2">丰厚奖励</h3>
+                    <p class="text-gray-300">冠军50次体验，亚30次体验，季军20次体验，每次8分钟，专属你的速度狂欢！</p>
+                </div>
+                
+                <div class="bg-secondary/50 rounded-xl p-6 transform transition-transform hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
+                    <div class="text-primary text-4xl mb-4"><i class="fa fa-flag-checkered"></i></div>
+                    <h3 class="font-display font-bold text-xl mb-2">公平竞技</h3>
+                    <p class="text-gray-300">车辆通过抽签选择，确保公平公正，让每一位选手都站在同一起跑线！</p>
+                </div>
+                
+                <div class="bg-secondary/50 rounded-xl p-6 transform transition-transform hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
+                    <div class="text-primary text-4xl mb-4"><i class="fa fa-users"></i></div>
+                    <h3 class="font-display font-bold text-xl mb-2">全民参与</h3>
+                    <p class="text-gray-300">无论经验如何，都可报名参加，未获名次者也有专属优惠！</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 奖励设置 -->
+        <section class="mb-16 bg-gradient-to-r from-secondary to-dark p-8 rounded-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/3 h-full kart-track opacity-20"></div>
+            <h2 class="font-display font-bold text-[clamp(1.8rem,4vw,2.5rem)] mb-8 relative z-10">诱人奖励等你来拿</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 relative z-10">
+                <!-- 冠军 -->
+                <div class="bg-primary/20 rounded-xl p-6 border-2 border-primary text-center">
+                    <div class="inline-block bg-primary text-dark rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <span class="font-display font-bold text-2xl">1st</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">冠军奖励</h3>
+                    <p class="text-2xl font-bold mb-2">50次体验</p>
+                    <p class="text-gray-300">每次8分钟<br>仅限本人使用</p>
+                </div>
+                
+                <!-- 亚军 -->
+                <div class="bg-gray-700/30 rounded-xl p-6 border-2 border-gray-500 text-center">
+                    <div class="inline-block bg-gray-500 text-dark rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <span class="font-display font-bold text-2xl">2nd</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">亚军奖励</h3>
+                    <p class="text-2xl font-bold mb-2">30次体验</p>
+                    <p class="text-gray-300">每次8分钟<br>仅限本人使用</p>
+                </div>
+                
+                <!-- 季军 -->
+                <div class="bg-amber-700/30 rounded-xl p-6 border-2 border-amber-600 text-center">
+                    <div class="inline-block bg-amber-600 text-dark rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <span class="font-display font-bold text-2xl">3rd</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">季军奖励</h3>
+                    <p class="text-2xl font-bold mb-2">20次体验</p>
+                    <p class="text-gray-300">每次8分钟<br>仅限本人使用</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 比赛规则 -->
+        <section class="mb-16">
+            <h2 class="font-display font-bold text-[clamp(1.8rem,4vw,2.5rem)] mb-8 text-center">比赛规则详解</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-10">
+                    <h3 class="font-display font-bold text-xl mb-4 flex items-center">
+                        <span class="bg-primary text-dark rounded-full w-8 h-8 flex items-center justify-center mr-3">1</span>
+                        比赛阶段
+                    </h3>
+                    <ul class="space-y-4 pl-11">
+                        <li class="flex">
+                            <span class="text-primary mr-3">●</span>
+                            <div>
+                                <span class="font-semibold">预选赛：</span>限时5分钟，圈数低于8圈的选手将被淘汰
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <span class="text-primary mr-3">●</span>
+                            <div>
+                                <span class="font-semibold">预赛：</span>两车同时发车，5分钟内圈数更多者获胜
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <span class="text-primary mr-3">●</span>
+                            <div>
+                                <span class="font-semibold">决赛：</span>规则同预赛，决出最终名次
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mb-10">
+                    <h3 class="font-display font-bold text-xl mb-4 flex items-center">
+                        <span class="bg-primary text-dark rounded-full w-8 h-8 flex items-center justify-center mr-3">2</span>
+                        车辆选择
+                    </h3>
+                    <p class="pl-11">采用抽签方式选择车辆，保证公平公正，让每位选手都有平等机会！</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-display font-bold text-xl mb-4 flex items-center">
+                        <span class="bg-primary text-dark rounded-full w-8 h-8 flex items-center justify-center mr-3">3</span>
+                        报名福利
+                    </h3>
+                    <p class="pl-11">所有报名参赛者，即便未获得名次，之后再来体验卡丁车，每次8分钟仅需20元！</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 报名信息 -->
+        <section class="text-center mb-16">
+            <div class="inline-block bg-primary text-dark px-8 py-4 rounded-full text-lg font-bold mb-6">
+                <i class="fa fa-calendar-check-o mr-2"></i>比赛时间：2025年8月1日（建军节）
+            </div>
+            <p class="text-xl mb-8">地点：雄安新区安新县大健康不夜城森林卡丁车俱乐部</p>
+            
+            <a href="https://docs.qq.com/sheet/DVkVLUUFrekxUZVB6"
+                 class="inline-block bg-primary hover:bg-primary/80 text-dark font-display font-bold text-lg px-8 py-4 rounded-full transition-all hover:shadow-lg hover:shadow-primary/30">
+                  立即报名，抢占赛道 <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-secondary py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">安新县大健康不夜城森林卡丁车俱乐部</p>
+            <p class="text-gray-400">©2025 版权所有 | 期待您的光临</p>
+        </div>
+    </footer>
+</body>
+</html>
